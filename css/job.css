@@ -1,0 +1,171 @@
+#job section{
+  padding: 10rem 0;
+}
+
+/* 제목 */
+#job .title{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+#job main .pre-title{
+  width: 100%;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url("../image/top-image2.png");
+  background-position: center;
+  background-size: cover;
+  padding: 17.6rem 0;
+  height: 49rem;
+}
+
+/* 첫번째 섹션 */
+#job main .pre-title h2{
+  color: var(--mainBg);
+  font-size: var(--font-xl);
+  text-align: center;
+  margin-top: 10rem;
+}
+
+/* 중앙 검색창 */
+#job .search-box2 { 
+  width:100%;
+  height: auto;
+  border-radius: 2rem;
+  color: var(--primaryColor);
+  margin: 0 auto;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+#job .search-box2 input {
+  border: solid 2px var(--primaryColor);
+  border-radius: 5rem;
+  background: transparent;
+  outline: none;
+  font-size: 1.8rem;
+  padding: 2rem;
+  width: 50rem;
+}
+#job .search-box2 a{
+  font-size: 3rem;
+  color: var(--primaryColor);
+  border: 2px solid var(--primaryColor);
+  border-radius: 5rem;
+  width: 6rem;
+  height: 6rem;
+  text-align: center;
+  line-height: 5.5rem;
+  transition: 0.3s;
+}
+#job .search-box2 a:hover{
+  background-color: var(--primaryColor);
+  color: #fff;
+}
+
+/* 두번째 섹션 게시판 */
+#job table tr td.left:hover{
+  background-color: #F7F4F3;
+}
+#job table {
+  margin: 0 auto;
+  border-collapse: separate;
+  border-spacing: 5rem 6rem;
+}
+#job table tr .center {
+  text-align: center;
+  font-size: 2rem;
+}
+#job table tr .left{
+  font-size: 2rem;
+}
+#job table tr .date{
+  font-size: 1.6rem;
+  text-align: center;
+}
+#job .button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 5rem;
+  color:var(--mainBg)
+}
+
+
+
+
+/* 타블렛_____________________ */
+@media (max-width:1400px)  {
+  #job section{
+    padding: 8rem 0;
+  }
+  #job .search-box2 input {
+    font-size: 1.8rem;
+    padding: 2rem;
+  }
+
+  #job table tr .center {
+    font-size: 1.8rem;
+  }
+  #job table tr .left{
+    font-size: 1.8rem;
+  }
+  #job table tr .date{
+    font-size: 1.6rem;
+  }
+  #job .search-box2 a{
+  background-color: var(--primaryColor);
+  color: #fff;
+}
+
+  #job #second_cardsbox { 
+    margin-top: 5rem;
+  }
+
+  #job .button {
+    margin-bottom: 10rem;
+  }
+}
+
+
+
+
+/* 모바일_________________________ */
+@media (max-width:768px){
+  #job section{
+    padding: 5rem 0;
+  }
+  #job .search-box2 input {
+    font-size: 1.6rem;
+    padding: 1.5rem;
+    width: 35rem;
+  }
+  #job .search-box2 a{
+    font-size: 2rem;
+    width: 5rem;
+    height: 5rem;
+    line-height: 4.5rem;
+  }
+
+  #job table {
+    border-spacing: 3rem 4rem;
+  }
+  #job table tr .center {
+    font-size: 1.6rem;
+  }
+  #job table tr .left,
+  #job table tr .date{
+    font-size: 1.5rem;
+  }
+
+  #job #second_cardsbox { 
+    margin-top: 5rem;
+    padding:0rem;
+    min-width: 36rem;
+  }
+
+  #job .button {
+    margin-bottom: 10rem;
+  }
+}

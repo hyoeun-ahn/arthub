@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>전시 상세페이지</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" defer></script>
+  <script src="fslightbox/fslightbox.js" defer></script>
+  <link rel="shortcut icon" href="image/favicon.png">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/header.js" defer></script>
+</head>
+<body id="ex-detail">
+  
+  <header id="ver-exhibit">
+    <div class="header-rel">
+      <div class="header-logo">
+        <a href="exhibit.html">
+          <img src="image/logo-exhibit.png" alt="logo">
+        </a>
+      </div>
+      <ul class="site-group">  
+        <li><a href="present.html" style="color: var(--primaryColor);">현재전시</a></li>
+        <li><a href="expect.html">예정전시</a></li>
+        <li><a href="past.html">지난전시</a></li>
+        <li><a href="artist.html">작가 포트폴리오</a></li>
+      </ul>
+      <div class="header-right">
+        <div class="search-box">
+          <input type="text" id="search" placeholder="검색어를입력하세요">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </div>
+        <div class="user-icon">
+          <a href="mypage.html?from=ver-exhibit"><i class="fa-solid fa-user"></i></a>
+        </div>
+        <div class="login-icon">
+          <a href="login.html?from=ver-exhibit"><i class="fa-solid fa-arrow-right-to-bracket"></i></a>
+        </div>
+
+        <!-- PC에서는 안보이게 함 -->
+        <a href="#" class="mob_btn">
+          <span></span>
+          <span></span>
+          <span></span>
+        </a>
+      </div>
+      <div class="subNav">
+        <div class="inner">
+          <div class="search-box">
+            <input type="text" placeholder="검색어를입력하세요">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </div>
+          <ul class="site-group">  
+            <li><a href="present.html">현재전시</a></li>
+            <li><a href="expect.html">예정전시</a></li>
+            <li><a href="past.html">지난전시</a></li>
+            <li><a href="artist.html">작가 포트폴리오</a></li>
+            <li class="mypage"><a href="mypage.html?from=ver-exhibit">마이페이지</a></li>
+            <li class="direct"><a href="contest.html">공모페이지 바로가기</a></li>
+            <li>
+              <div class="sns">
+                <a href="https://www.facebook.com/arthub02"><img src="image/facebook-white.png" class="facebook"alt="facebook"></a>
+                <a href="instagram.com/arthub_vap/"><img src="image/insta-white.png" class="insta"alt="insta"></a>
+                <a href="https://blog.naver.com/venice87"><img src="image/blog-white.png" class="blog"alt="blog"></a>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="allMenuWrapBg"></div>
+  </header>
+
+  <!-- 리모콘 -->
+  <div class="control">
+    <a class="control-main" href="exhibit.html">
+      <i class="bi bi-arrow-bar-right"></i>전시 페이지
+    </a>
+    <a class="control-main" href="contest.html">
+      <i class="bi bi-arrow-bar-right"></i>공모 페이지
+    </a>
+    <a class="control-intro" href="index.html">
+      <i class="bi bi-house-door-fill"></i>
+    </a>
+    <a class="control-top" href="#">
+      <i class="bi bi-chevron-double-up"></i>
+    </a>
+  </div>
+
+  <main>
+    <div class="rel">
+      <div class="main-image">
+        <div class="des">
+          <h2>CONNECTED_응축된 호흡</h2>
+          <h2>송미리내展</h2>
+          <div class="tags category">
+            <h5 class="tag primary">#현재 전시</h5>
+            <h5 class="tag accent">#Painting</h5>
+          </div>
+          <h5>2025-05-07 ~ 2025-05-20</h5>
+          <h6>서울시 영등포구 국제금융로8길16 신영증권BD, B128호 아트 살롱 드 아씨 갤러리</h6>
+        </div>
+      </div>
+      <div class="tags state">
+        <span class="tag primary"><i class="fa-solid fa-check"></i> 다녀간 전시</span>
+        <span class="tag accent"><i class="fa-solid fa-heart"></i> 찜한 전시</span>
+      </div>
+    </div>
+  </main>
+  <section id="overview">
+    <div class="rel">
+      <h2>전시 개요</h2>
+      <div class="container-wrap">
+        <div class="container info">
+          <h3>전시 정보</h3>
+          <div class="content">
+            <p><b>전시명</b><span>CONNECTED_응축된 호흡</span></p>
+            <p><b>작가</b><span>송미리내</span></p>
+            <p><b>전시 기간</b><span>2025-05-07 ~ 2025-05-20</span></p>
+            <p><b>장소</b><span>서울시 영등포구 국제금융로8길16 신영증권BD, B128호 아트 살롱 드 아씨 갤러리</span></p>
+            <p><b>공유하기</b><span><img src="image/facebook.png" alt="" class="sns"><img src="image/twitter.png" alt="" class="sns"></span></p>
+          </div>
+        </div>
+        <div class="container review">
+          <h3>평론</h3>
+          <h4>실과 천, 그리고 보이지 않는 감정의 결</h4>
+          <p>
+            송미리내 작가는 바느질을 업으로 삼은 부모 곁에서 자란 기억을 바탕으로, 일상의 재료인 실과 자투리 천, 그리고 자신만의 매체인 텍스트 드로잉을 통해 시간, 공간, 자연, 인간 사이의 섬세한 연결을 작업에 담아냅니다.<br>이번 전시는 작가가 오랜 시간 세상과 나눈 감각과 관계들을 응축한 결과로, 관람자와의 깊은 호흡을 시도합니다. 조용하지만 밀도 있는 조형 언어로 구성된 작품들은 보는 이의 감정과 기억을 조용히 흔들며, 내면의 감각을 환기시키는 예술적 공간을 형성합니다.<br>작품을 통해 우리는 단순한 시각적 경험을 넘어, ‘호흡’하고 ‘공감’하는 새로운 방식의 감상 여정을 만나게 됩니다.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+    
+  <section id="preview">
+    <div class="rel">
+      <h2>작품 미리보기</h2>
+      <div class="swiper-all">
+        <div class="swiper mySwiper1">
+          <ul class="swiper-wrapper">
+            <li class="post-item swiper-slide">
+              <a data-fslightbox="gallery" href="image/preview-1.jpg" >
+                <img class="post-img" src="image/preview-1.jpg" alt="">
+                <div class="post-text">
+                  <h3>
+                    앞으로 계속해서 이겨낼 수 있길.. 그게 무엇이든
+                  </h3>
+                  <h5>
+                    Acrylic & Mixed Media on Canvas
+                  </h5>
+                  <h6>
+                    117 x 92cm, 2025
+                  </h6>
+                </div>
+              </a>
+            </li>
+            <li class="post-item swiper-slide">
+              <a data-fslightbox="gallery" href="image/preview-2.jpg">
+                <img class="post-img" src="image/preview-2.jpg" alt="">
+                <div class="post-text">
+                  <h3>
+                    행복해서 웃는 게 아니라 웃어서 행복한 것입니다
+                  </h3>
+                  <h5>
+                    Acrylic & Mixed Media on Canvas
+                  </h5>
+                  <h6>
+                    92 x 117cm, 2025
+                  </h6>
+                </div>
+              </a>
+            </li>
+            <li class="post-item swiper-slide">
+              <a data-fslightbox="gallery" href="image/preview-3.jpg" >
+                <img class="post-img" src="image/preview-3.jpg" alt="">
+                <div class="post-text">
+                  <h3>
+                    미안해, 받은 만큼 돌려 줄게
+                  </h3>
+                  <h5>
+                    Acrylic & Mixed Media on Canvas
+                  </h5>
+                  <h6>
+                    46 x 46cm, 2025
+                  </h6>
+                </div>
+              </a>
+            </li>
+            <li class="post-item swiper-slide">
+              <a data-fslightbox="gallery" href="image/preview-4.jpg" >
+                <img class="post-img" src="image/preview-4.jpg" alt="">
+                <div class="post-text">
+                  <h3>
+                    앞으로 우리가 신경 쓰고, 지켜줄게
+                  </h3>
+                  <h5>
+                    Acrylic & Mixed Media on Canvas
+                  </h5>
+                  <h6>
+                    46 x 46cm, 2024
+                  </h6>
+                </div>
+              </a>
+            </li>
+            <li class="post-item swiper-slide">
+              <a data-fslightbox="gallery" href="image/preview-5.jpg" >
+                <img class="post-img" src="image/preview-5.jpg" alt="">
+                <div class="post-text">
+                  <h3>
+                    저도 두렵지만 결국에는 회복할 거예요
+                  </h3>
+                  <h5>
+                    Acrylic & Mixed Media on Canvas
+                  </h5>
+                  <h6>
+                    46 x 46cm, 2024
+                  </h6>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="swiper-button-prev swiper1-prev"></div>
+        <div class="swiper-button-next swiper1-next"></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="comment">
+    <h2>감상평</h2>
+    <div class="comment-wrap">
+      <div class="comment-input">
+        <textarea rows="3" cols="30"></textarea>
+        <div class="btn primary">감상평 남기기</div>
+      </div>
+      <div class="person person1 container">
+        <img src="image/person1.png" alt="">
+        <div class="right">
+          <h4 class="id">ah******</h4>
+          <p class="quote">
+            와... 조용한데 되게 깊이 와닿는 전시였어요. 실과 천으로 이렇게 감정을 표현할 수 있다니
+          </p>
+        </div>
+      </div>
+      <div class="person person2 container">
+        <img src="image/person2.png" alt="">
+        <div class="right">
+          <h4 class="id">ls******</h4>
+          <p class="quote">
+            그냥 작품을 ‘보는’ 게 아니라, 진짜 같이 숨 쉬는 느낌이었어요. 고요한 울림이 오래 남네요.
+          </p>
+        </div>
+      </div>
+      <div class="person person3 container">
+        <img src="image/person3.png" alt="">
+        <div class="right">
+          <h4 class="id">hj******</h4>
+          <p class="quote">
+            자투리 천 하나에도 이야기가 있더라고요. 말 없이 말 거는 느낌? 되게 신기했어요.
+          </p>
+        </div>
+      </div>
+      <div class="person person4 container">
+        <img src="image/person4.png" alt="">
+        <div class="right">
+          <h4 class="id">lj******</h4>
+          <p class="quote">
+            눈보다 마음으로 보는 전시… 작가님 호흡이랑 감정이 작품에 그대로 느껴졌어요.
+          </p>
+        </div>
+      </div>
+      <div class="person person5 container">
+        <img src="image/person5.png" alt="">
+        <div class="right">
+          <h4 class="id">kg******</h4>
+          <p class="quote">
+            텍스트 드로잉 처음 봤는데, 생각보다 감정이 확 전해져서 놀랐어요. 잔잔한 감동
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="artist">
+    <div class="rel">
+      <div class="title">
+        <div class="left">
+          <h2>작가</h2>
+          <h4>선호작가</h4>
+        </div>
+        <h4 class="right">
+          <a href="artist.html">작가 포트폴리오 보러가기 <i class="fa-solid fa-arrow-right"></i></a>
+        </h4>
+      </div>
+      <div class="container-wrap">
+        <div class="container profile">
+          <h3>작가 프로필</h3>
+          <div class="content">
+            <p><b>작가</b><span>송미리내(Song Milinae)</span></p>
+            <p><b>연락처</b><span>02-786-9184</span></p>
+            <p><b>이메일</b><span>songmilinae@gmail.com</span></p>
+            <p><b>SNS</b><span><img src="image/instar.png" alt="" class="sns"></span></p>
+          </div>
+        </div>
+        <div class="container career">
+          <h3>작가 약력</h3>
+          <div class="content">
+            <p><b>학력</b><span>홍익대학교 대학원 회화과 졸업</span></p>
+            <div class="win">
+              <b>수상 경력</b>
+              <ul>
+                <li>2024 인카네이션문화재단 예술상 수상</li>
+                <li>2024 소마미술관 등록작가 선정</li>
+                <li>2024 ㈜시크릿타운 주최 ‘코리아 아티스트 프라이즈’ 최우수상</li>
+                <li>2023 서울문화재단 신진예술가 선정</li>
+              </ul>
+            </div>
+          </div>
+          <!-- <div class="btn primary">더보기</div> -->
+        </div>
+      </div>
+      <div class="another">
+        <h3>작가의 다른 전시</h3>
+        <div class="swiper-all">
+          <div class="swiper mySwiper2">
+            <ul class="swiper-wrapper">
+              <li class="post-item swiper-slide">
+                <a href="ex-detail.html">
+                  <img class="post-img" src="image/another1.jpg" alt="">
+                  <div class="post-text">
+                    <h3>공원의 낮과 밤
+                      <br> - 만들어진 풍경, 재생되는 자연</h3>
+                  </div>
+                </a>
+              </li>
+              <li class="post-item swiper-slide">
+                <a href="ex-detail.html">
+                  <img class="post-img" src="image/another2.jpg" alt="">
+                  <div class="post-text">
+                    <h3>2024 올해의 작가展 'Bouquet'</h3>
+                  </div>
+                </a>
+              </li>
+              <li class="post-item swiper-slide">
+                <a href="ex-detail.html">
+                  <img class="post-img" src="image/another3.jpg" alt="">
+                  <div class="post-text">
+                    <h3>송미리내展</h3>
+                  </div>
+                </a>
+              </li>
+              <li class="post-item swiper-slide">
+                <a href="ex-detail.html">
+                  <img class="post-img" src="image/another4.jpg" alt="">
+                  <div class="post-text">
+                    <h3>CONNECTED 4
+                      <br> - 너와나 언젠가 다시 만난다</h3>
+                  </div>
+                </a>
+              </li>
+              <li class="post-item swiper-slide">
+                <a href="ex-detail.html">
+                  <img class="post-img" src="image/another5.jpg" alt="">
+                  <div class="post-text">
+                    <h3>송미리내展</h3>
+                  </div>
+                </a>
+              </li>
+              <li class="post-item swiper-slide">
+                <a href="ex-detail.html">
+                  <img class="post-img" src="image/another6.jpg" alt="">
+                  <div class="post-text">
+                    <h3>페티쉬 PETISH</h3>
+                  </div>
+                </a>
+              </li>
+              <li class="post-item swiper-slide">
+                <a href="ex-detail.html">
+                  <img class="post-img" src="image/another7.jpg" alt="">
+                  <div class="post-text">
+                    <h3>CONNECTED 2 <br>- 송미리내展</h3>
+                  </div>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="swiper-button-prev swiper2-prev"></div>
+          <div class="swiper-button-next swiper2-next"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-inner">
+      <a class="footer-no-pc" href="index.html">
+        <img src="image/logo-white.png" alt="아트허브 로고">
+      </a>
+      <div class="footer-item">
+        <div class="footer-tit">
+          <a href="index.html">예술과 아카이브</a>
+        </div>
+        <div class="footer-info">
+          <a href="#"><span>개인정보취급방침</span></a>
+          <span>사업자 등록번호 : 314-20-75752 </span>
+        </div>
+        <div class="footer-contact">
+          <span>Contact</span>
+          <p>02-2654-7138</p>
+          <p>arthub2@naver.com</p>
+        </div>
+      </div>
+      <div class="footer-sns">
+        <a href="instagram.com/arthub_vap/">
+          <img src="image/icon-sns1.png" alt="인스타그램">
+        </a>
+        <a href="https://blog.naver.com/venice87">
+          <img src="image/icon-sns2.png" alt="블로그">
+        </a>
+        <a href="https://www.facebook.com/arthub02">
+          <img src="image/icon-sns3.png" alt="페이스북">
+        </a>
+      </div>
+    </div>
+    <address>
+      Copyright ARTHUB. All Rights Reserved
+    </address>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script>
+    var swiper1 = new Swiper(".mySwiper1", {
+      // loop: true,
+      spaceBetween: 50,
+      // slidesOffsetBefore: 50,
+      // slidesOffsetAfter: 50,
+      slidesPerView:1,
+      // slidesPerView : "auto",
+      navigation: {
+        prevEl: ".swiper1-prev",
+        nextEl: ".swiper1-next",
+      },
+      breakpoints:{
+        768:{
+          slidesPerView:3
+        },
+        1400:{
+          slidesPerView:4
+        },
+      }
+    });
+    var swiper2 = new Swiper(".mySwiper2", {
+      spaceBetween: 50,
+      slidesPerView:1,
+      navigation: {
+        prevEl: ".swiper2-prev",
+        nextEl: ".swiper2-next",
+      },
+      breakpoints:{
+        768:{
+          slidesPerView:3
+        },
+        1400:{
+          slidesPerView:4
+        },
+      }
+    });
+    
+  </script>
+
+</body>
+</html>

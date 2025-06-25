@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>공모페이지-상세</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js" defer></script>
+  <script src="https://kit.fontawesome.com/d7f60ae480.js" crossorigin="anonymous"></script>
+  <link rel="shortcut icon" href="image/favicon.png">
+  <link rel="stylesheet" href="css/style.css">
+  <!-- <link rel="stylesheet" href="css/recruit.css"> -->
+  <script src="js/card.js"></script>
+  <script src="js/header.js" defer></script> 
+  <script>
+    $(function() {
+        $(".button1").on("click", function() {
+            $("#postlist1").toggle("show");
+        })
+    })
+</script>
+
+</head>
+
+<body id="recruit">
+
+  <!-- 헤더 시작 -->
+  <header id="ver-contest">
+    <div class="header-rel">
+      <div class="header-logo">
+        <a href="contest.html">
+          <img src="image/logo-recruit.png" alt="logo">
+        </a>
+      </div>
+      <ul class="site-group">  
+        <li><a href="recruit.html" style="color: var(--secondaryColor);">종합공모</a></li>
+        <li><a href="job.html">아트잡</a></li>
+      </ul>
+      <div class="header-right">
+        <div class="search-box">
+          <input type="text" id="search" placeholder="검색어를입력하세요">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </div>
+        <div class="user-icon">
+          <a href="mypage.html?from=ver-contest"><i class="fa-solid fa-user"></i></a>
+        </div>
+        <div class="login-icon">
+          <a href="login.html?from=ver-contest"><i class="fa-solid fa-arrow-right-to-bracket"></i></a>
+        </div>
+
+        <!-- PC에서는 안보이게 함 -->
+        <a href="#" class="mob_btn">
+          <span></span>
+          <span></span>
+          <span></span>
+        </a>
+      </div>
+      <div class="subNav">
+        <div class="inner">
+          <div class="search-box">
+            <input type="text" placeholder="검색어를입력하세요">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </div>
+          <ul class="site-group">  
+            <li><a href="recruit.html">종합공모</a></li>
+            <li><a href="job.html">아트잡</a></li>
+            <li class="mypage"><a href="mypage.html?from=ver-exhibit">마이페이지</a></li>
+            <li class="direct"><a href="exhibit.html">전시페이지 바로가기</a></li>
+            <li>
+              <div class="sns">
+                <a href="https://www.facebook.com/arthub02"><img src="image/facebook-white.png" class="facebook"alt="facebook"></a>
+                <a href="instagram.com/arthub_vap/"><img src="image/insta-white.png" class="insta"alt="insta"></a>
+                <a href="https://blog.naver.com/venice87"><img src="image/blog-white.png" class="blog"alt="blog"></a>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="allMenuWrapBg"></div>
+  </header>
+
+  <!-- 리모콘 -->
+  <div class="control">
+    <a class="control-main" href="exhibit.html">
+      <i class="bi bi-arrow-bar-right"></i>전시 페이지
+    </a>
+    <a class="control-main" href="contest.html">
+      <i class="bi bi-arrow-bar-right"></i>공모 페이지
+    </a>
+    <a class="control-intro" href="index.html">
+      <i class="bi bi-house-door-fill"></i>
+    </a>
+    <a class="control-top" href="#">
+      <i class="bi bi-chevron-double-up"></i>
+    </a>
+  </div>
+
+  <main class="recruit_cards">
+  
+    <div class="pre-title">
+      <h2>종합공모</h2>
+      <h3>모든 공고들을 모아놓았어요</h3>
+    </div> 
+ <!-- 검색창 -->
+
+  <section class="search">
+      <h5>현재 공모중인 작품을 확인해보세요</h5>
+      <div class="ex-search-box">
+        <div class="month-wrapper">
+          <input type="month" id="monthInput" />
+          <i class="fa-solid fa-calendar custom-icon"></i>
+        </div>
+        <input type="text" placeholder="전시 검색..." />
+        <i class="fa fa-search"></i>
+      </div>
+      <ul class="cate">
+        <li>
+          <div class="button1" onclick="showContent('post-list1')">
+          예정된 공모
+          </div>
+        </li>
+        <li>
+          <div class="button2" onclick="showContent('post-list2')">
+          진행중 공모
+          </div></li>
+        <li>
+          <div class="button3" onclick="showContent('post-list3')">
+          마감된 공모
+          </div>
+        </li>
+      </ul>
+  </section>
+
+ 
+    <ul id="post-list1" class="post-list">
+        <li class="post-item">   
+            <a href="con-detail.html">
+              <img src="image/1.png" class="post-img" alt="card1">
+              <div class="post-text"> 
+              <h3>제 4회 아트코리아<br>국제미술대전</h3>
+              <h5>아트코리아</h5>
+              <h6>2025/05/19 - 05/25</h6>
+              </div>                
+            </a>
+        </li>
+        <li class="post-item">   
+            <a href="con-detail.html">
+              <img src="image/2.png" class="post-img" alt="card2">
+              <div class="post-text"> 
+              <h3>이지갤러리 작가모집</h3>
+              <h5>이지갤러리</h5>
+              <h6>2025/05/19 - 05/25</h6>
+              </div>                
+            </a>
+        </li>
+        <li class="post-item">   
+            <a href="con-detail.html">
+              <img src="image/3.png" class="post-img" alt="card3">
+              <div class="post-text"> 
+              <h3>제 33회 대한기독미술대전</h3>
+              <h5>한국 미술인 선교회</h5>
+              <h6>2025/04/20 - 05/25</h6>
+              </div>                
+            </a>
+        </li>
+        <li class="post-item">   
+            <a href="con-detail.html">
+              <img src="image/4.png" class="post-img" alt="card4">
+              <div class="post-text"> 
+              <h3>더 스퀘어즈 뉴스 2025하반기 작가공모</h3>
+              <h5>더스퀘어즈 갤러리</h5>
+              <h6>2025/04/20 - 05/25</h6>
+              </div>                
+            </a>
+        </li>
+        <li class="post-item">   
+            <a href="con-detail.html">
+              <img src="image/5.png" class="post-img" alt="card5">
+              <div class="post-text"> 
+              <h3>2025 사진가 인큐베이팅 프로그램</h3>
+              <h5>H.art bridge</h5>
+              <h6>2025/04/20 - 05/25</h6>
+              </div>                
+            </a>
+        </li>
+        <li class="post-item">   
+            <a href="con-detail.html">
+              <img src="image/6.png" class="post-img" alt="card6">
+              <div class="post-text"> 
+              <h3>N’s갤러리 카페 단체전 작가모집 공고</h3>
+              <h5>N’s gallery</h5>
+              <h6>2025/04/20 - 05/25</h6>
+              </div>                
+            </a>
+        </li>
+        <li class="post-item">   
+            <a href="con-detail.html">
+              <img src="image/7.png" class="post-img" alt="card7">
+              <div class="post-text"> 
+              <h3>강남 장애인복지관 기획전시 신진작가 <br> 공모전</h3>
+              <h5>강남장애인 복지관</h5>
+              <h6>2025/05/09 - 05/25</h6>
+              </div>                
+            </a>
+        </li>
+        <li class="post-item">   
+            <a href="con-detail.html">
+              <img src="image/8.png" class="post-img" alt="card8">
+              <div class="post-text"> 
+              <h3>술술랩 - 예술, 기술 플레이어 모집</h3>
+              <h5>술술랩</h5>
+              <h6>2025/04/20 - 05/25</h6>
+              </div>                
+            </a>
+        </li>
+        <li class="post-item">   
+            <a href="con-detail.html">
+              <img src="image/9.png" class="post-img" alt="card9">
+              <div class="post-text"> 
+              <h3>마포문화재단 지역예술가 <br>전시공간 지원</h3>
+              <h5>마포문화재단</h5>
+              <h6>2025/04/20 - 05/25</h6>
+              </div>                
+            </a>
+        </li>
+        <li class="post-item">   
+            <a href="con-detail.html">
+              <img src="image/10.png" class="post-img" alt="card10">
+              <div class="post-text"> 
+              <h3>미림아트 갤러리 
+                  대관작가 모집</h3>
+              <h5>미림아트갤러리</h5>
+              <h6>2025/04/20 - 05/25</h6>
+              </div>                
+            </a>
+        </li>
+        <li class="post-item">   
+            <a href="con-detail.html">
+              <img src="image/11.png" class="post-img" alt="card11">
+              <div class="post-text"> 
+              <h3>후소회 청년작가 공모전</h3>
+              <h5>후소회</h5>
+              <h6>2025/05/19 - 05/25</h6>
+              </div>                
+            </a>
+        </li>
+        <li class="post-item">   
+            <a href="con-detail.html">
+              <img src="image/12.png" class="post-img" alt="card12">
+              <div class="post-text"> 
+              <h3>SEATTLE ART FAIR</h3>
+              <h5>Seattle Art Fair</h5>
+              <h6>2025/07/17 - 07/20</h6>
+              </div>                
+            </a>
+        </li>
+    </ul>
+
+    <ul id="post-list2" class="post-list">
+        <li class="post-item">   
+            <a href="con-detail.html">
+              <img src="image/13.png" class="post-img" alt="card13">
+              <div class="post-text"> 
+                <h3>2025 Orbit International <br> Art Fair in Yokohama</h3>              
+                <h5>Art Orbit</h5>
+                <h6>2025/05/13 - 06/13</h6>
+              </div>                
+            </a>
+        </li>
+        <li class="post-item">   
+            <a href="con-detail.html">
+              <img src="image/14.png" class="post-img" alt="card14">
+              <div class="post-text"> 
+                <h3>Hyundai Blue Prize+</h3>
+                <h5>현대 모터스튜디오</h5>
+                <h6>2025/03/20 - 06/08</h6>
+              </div>                
+            </a>
+        </li>
+        <li class="post-item">   
+            <a href="con-detail.html">
+              <img src="image/15.png" class="post-img" alt="card15">
+              <div class="post-text"> 
+                <h3>광주 비엔날레 아카데미 전시기획자 양성과정 참여자모집</h3>
+                <h5>광주 비엔날레 아카데미</h5>
+                <h6>2025/05/21 - 06/15</h6>
+              </div>                
+            </a>
+        </li>
+        <li class="post-item">   
+            <a href="con-detail.html">
+              <img src="image/16.png" class="post-img" alt="card16">
+              <div class="post-text"> 
+              <p>2026 LA ART SHOW 작가공모</p>
+                <h3>공모부분 : 시각 예술 전 분야
+                <h5>LA ART SHOW</h5>
+                <h6>2025/04/01 - 07/01</h6>
+              </div>                
+            </a>
+        </li>
+        <li class="post-item">   
+            <a href="con-detail.html">
+              <img src="image/17.png" class="post-img" alt="card17">
+              <div class="post-text"> 
+                <h3>알파색채X라트 6월 기획전 작가 공모</h3>
+                <h5>인사1010 갤러리</h5>
+                <h6>2025/05/02 - 06/01</h6>
+              </div>                
+            </a>
+        </li>
+        <li class="post-item">   
+            <a href="con-detail.html">
+              <img src="image/18.png" class="post-img" alt="card18">
+              <div class="post-text"> 
+                <h3>갤러리M 신진작가 공모: 너의<br> 잠재력을 보여줘!</h3>
+                <h5>갤러리M</h5>
+                <h6>2025/05/19 - 05/25</h6>
+              </div>                
+            </a>
+        </li>
+        <li class="post-item">   
+            <a href="con-detail.html">
+              <img src="image/19.png" class="post-img" alt="card19">
+              <div class="post-text"> 
+                <h3>노마드 프로젝트 2025 프랑스 레지던시<br>작가 모집 공고</h3>
+                <h5>Nomade Galerie</h5>
+                <h6>2024/12/16 - 2025/12/31</h6>
+              </div>                
+            </a>
+        </li>
+        <li class="post-item">   
+            <a href="con-detail.html">
+              <img src="image/20.png" class="post-img" alt="card20">
+              <div class="post-text"> 
+                <h3>새벽세시 갤러리<br> 정기 기획전<br> 작가모집 공고</h3>
+                <h5>새벽세시 갤러리</h5>
+                <h6>2025/05/11 - 06/11</>
+              </div>                
+            </a>
+        </li>
+        <li class="post-item">   
+            <a href="con-detail.html">
+              <img src="image/21.png" class="post-img" alt="card21">
+              <div class="post-text"> 
+                <h3>초대전시<br>평문프로그램<br> 작가공모</h3>
+                <h5>사이아트센터</h5>
+                <h6>2025/05/21 - 06/02</h6>
+              </div>                
+            </a>
+        </li>
+        <li class="post-item">   
+            <a href="con-detail.html">
+              <img src="image/22.png" class="post-img" alt="card22">
+              <div class="post-text"> 
+                <h3>디자인 아트페어 참여작가 1차모집</h3>
+                <h5>예술의전당</h5>
+                <h6>2025/05/08 - 06/10</h6>
+              </div>                
+            </a>
+        </li>
+        <li class="post-item">   
+            <a href="con-detail.html">
+              <img src="image/23.png" class="post-img" alt="card23">
+              <div class="post-text"> 
+                <h3>CICA Art<br>Residency/internship Program 2026</h3>
+                <h5>CICA Art Residency</h5>
+                <h6>2025/05/19 - 05/25</h6>
+              </div>                
+            </a>
+        </li>
+        <li class="post-item">   
+            <a href="con-detail.html">
+              <img src="image/24.png" class="post-img" alt="card24">
+              <div class="post-text"> 
+                <h3>2025년 제2회<br>모나밸리 국제 아트 페어</h3>
+                <h5>주식회사 모나밸리</h5>
+                <h6>2025/03/03 - 06/27</h6>
+              </div>                
+            </a>
+        </li>
+    </ul>
+
+
+    <ul id="post-list3" class="post-list">
+        <li class="post-item">   
+            <a href="con-detail.html">
+              <img src="image/25.png" class="post-img" alt="card25">
+              <div class="post-text"> 
+                <p>2025/2026 현대미술제 공모</p>
+                <p>아트 스페이스 X</p>
+                <p>2025/05/07 - 05/31</p>
+              </div>                
+            </a>
+        </li>
+        <li class="post-item">   
+            <a href="con-detail.html">
+              <img src="image/26.png" class="post-img" alt="card26">
+              <div class="post-text"> 
+                <h3>지역공예가 창작연구<br> 지원사업 참여자 모집공고</h3>
+                <h5>김해공예 창작지원센터</h5>
+                <h6>2025/04/16 - 05/25</h6>
+              </div>                
+            </a>
+        </li>
+        <li class="post-item">   
+            <a href="con-detail.html">
+              <img src="image/27.png" class="post-img" alt="card27">
+              <div class="post-text"> 
+                <h3>천안시립미술관 신진작가<br>공모전 작가 모집 공고</h3>
+                <h5>디아스포라</h5>
+                <h6>2025/05/12 - 05/25</h6>
+              </div>                
+            </a>
+        </li>
+        <li class="post-item">   
+            <a href="con-detail.html">
+              <img src="image/28.png" class="post-img" alt="card28">
+              <div class="post-text"> 
+                <h3>목계나루 문화공간 2025년<br> 무료대관 신청</h3>
+                <h5>목계나루</h5>
+                <h6>2025/02/27 - 03/13</h6>
+              </div>                
+            </a>
+        </li>
+        <li class="post-item">   
+            <a href="con-detail.html">
+              <img src="image/29.png" class="post-img" alt="card29">
+              <div class="post-text"> 
+                <h3>2025 메탈하우스 갤러리<br> 신진작가 공모전</h3>
+                <h5>메탈하우스</h5>
+                <h6>2025/04/12 - 05/11</h6>
+              </div>                
+            </a>
+        </li>
+        <li class="post-item">   
+            <a href="con-detail.html">
+              <img src="image/30.png" class="post-img" alt="card30">
+              <div class="post-text"> 
+                <h3>2025 비엔날레 미디어 파사드<br> 신진작가 공모</h3>
+                <h5>미디어 파사드</h5>
+                <h6>2025/04/18 - 05/09</h6>
+              </div>                
+            </a>
+        </li>
+        <li class="post-item">   
+            <a href="con-detail.html">
+              <img src="image/31.png" class="post-img" alt="card31">
+              <div class="post-text"> 
+                <h3>NS갤러리카페 4회 단체전 작가 모집</h3>
+                <h5>아트코리아</h5>
+                <h6>2025/05/19 - 05/25</h6>
+              </div>                
+            </a>
+        </li>
+        <li class="post-item">   
+            <a href="con-detail.html">
+              <img src="image/32.png" class="post-img" alt="card32">
+              <div class="post-text"> 
+                <h3>수문장 아트페어</h3>
+                <h5>수원시</h5>
+                <h6>2025/04/23 - 05/07</h6>
+              </div>                
+            </a>
+        </li>
+        <li class="post-item">   
+            <a href="con-detail.html">
+              <img src="image/33.png" class="post-img" alt="card33">
+              <div class="post-text"> 
+                <h3>네이처 프로젝트 1차공모</h3>
+                <h5>서울시</h5>
+                <h6>2025/04/09 - 05/16</h6>
+              </div>                
+            </a>
+        </li>
+        <li class="post-item">   
+            <a href="con-detail.html">
+              <img src="image/34.png" class="post-img" alt="card34">
+              <div class="post-text"> 
+                <h3>슬도아트&방어진 전시대관 공모</h3>
+                <h5>슬도아트&방어진</h5>
+                <h6>2025/04/15 - 04/30</h6>
+              </div>                
+            </a>
+        </li>
+        <li class="post-item">   
+            <a href="con-detail.html">
+              <img src="image/35.png" class="post-img" alt="card35">
+              <div class="post-text"> 
+                <h3>오솔갤러리 2025 하반기 작가공모</h3>
+                <h5>오솔갤러리</h5>
+                <h6>2025/04/30 까지</h6>
+              </div>                
+            </a>
+        </li>
+        <li class="post-item">   
+            <a href="con-detail.html">
+              <img src="image/36.png" class="post-img" alt="card36">
+              <div class="post-text"> 
+                <h3>KT&G 상상마당 20주년 기념사업</h3>
+                <h5>KT&G</h5>
+                <h6>2025/03/25 - 04/28</h6>
+              </div>                
+            </a>
+        </li>
+    </ul>
+
+
+    <div class="button">
+      <a href="#none" class="btn">더보기</a>
+    </div>
+  </main>
+
+<footer>
+  <div class="footer-inner">
+    <a class="footer-no-pc" href="index.html">
+      <img src="image/logo-white.png" alt="아트허브 로고">
+    </a>
+    <div class="footer-item">
+      <div class="footer-tit">
+        <a href="index.html">예술과 아카이브</a>
+      </div>
+      <div class="footer-info">
+        <a href="#"><span>개인정보취급방침</span></a>
+        <span>사업자 등록번호 : 314-20-75752 </span>
+      </div>
+      <div class="footer-contact">
+        <span>Contact</span>
+        <p>02-2654-7138</p>
+        <p>arthub2@naver.com</p>
+      </div>
+    </div>
+    <div class="footer-sns">
+      <a href="instagram.com/arthub_vap/">
+        <img src="image/icon-sns1.png" alt="인스타그램">
+      </a>
+      <a href="https://blog.naver.com/venice87">
+        <img src="image/icon-sns2.png" alt="블로그">
+      </a>
+      <a href="https://www.facebook.com/arthub02">
+        <img src="image/icon-sns3.png" alt="페이스북">
+      </a>
+    </div>
+  </div>
+  <address>
+    Copyright ARTHUB. All Rights Reserved
+  </address>
+</footer>
+
+</body>
+</html>
+</html>

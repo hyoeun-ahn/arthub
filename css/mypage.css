@@ -1,0 +1,728 @@
+@charset "utf-8"; 
+#mypage{background-color: #F7F4F3;}
+
+/* 스크롤애니메이션 */
+#mypage .fade-up {
+  opacity: 0;
+  transform: translateY(-50px);
+  transition: all 0.8s ease;
+}
+#mypage .fade-up.active {
+  opacity: 1;
+  transform: translateY(0);
+} 
+
+#mypage .my-title{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 7rem;
+}
+#mypage .my-title h2{padding: 0 8rem;}
+
+
+#mypage .profile-box{
+  border: 1px solid var(--primaryColor);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 130rem;
+  height: 34rem;
+  border-radius: 3rem;
+  background-color: #fff;
+}
+#mypage .btn-box{display: none;}
+
+#mypage .profile-user{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#mypage .profile-user p{
+  font-size: 2.4rem;
+  color: #333;
+}
+
+#mypage .profile-user img{
+  width: 18rem;
+  height: 18rem;
+  border-radius: 50rem;
+  margin-bottom: 2rem;
+}
+
+#mypage .profile-user p{font-weight: 300;}
+#mypage .profile-user p strong{font-weight: 600;}
+
+#mypage .profile-info {
+  margin: 0 6rem;
+  width: 33rem;
+}
+#mypage .profile-id,
+#mypage .profile-email,
+#mypage .profile-num{
+  display: flex;
+  margin: 4rem 0;
+  justify-content: space-between;
+}
+
+#mypage h4{
+  color: var(--primaryColor);
+  width: 9rem;
+  font-size: var(font-sm);
+  font-size: 2rem;
+}
+#mypage h5{
+  color: #333;
+  width: 20rem;
+  text-align: left;
+}
+
+#mypage .profile-btn{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: end;
+  width: 28rem;
+  height: 18rem;
+}
+
+#mypage .profile-btn a{
+  border: 1px solid var(--primaryColor);
+  border-radius: 5rem;
+  width: 25rem;
+  height: 5rem;
+  font-size: 2.4rem;
+  color: #fff;
+  background-color: var(--primaryColor);
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: 0.3s;
+}
+#mypage .profile-btn a p{
+  width: 10rem;
+  font-size: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#mypage .profile-btn a:hover{opacity: 0.8;}
+
+/* sub-btn */
+#mypage .sub-btn{
+  width: 130rem;
+  padding-right: 2.5rem;
+  text-align: right;
+  margin-top: 3rem;
+}
+#mypage button.logout,
+#mypage button.exit{
+  background-color: #fff;
+  width: 12rem;
+  height: 4.5rem;
+  border-radius: 5rem;
+  font-size: 1.8rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+#mypage button.logout{
+  color: var(--secondaryColor);
+  border: 1px solid var(--secondaryColor);
+}
+#mypage button.logout:hover{
+  color: #fff;
+  background-color: var(--secondaryColor);
+}
+#mypage button.exit{
+  color:#999;
+  border: 1px solid #999;
+}
+#mypage button.exit:hover{
+  color: #fff;
+  background-color: #999;
+}
+
+
+
+
+/* 마이페이지 공통 */
+#mypage .mypage-secTit{
+  border-bottom: 1px solid #ccc;
+  width: 130rem;
+  height: 9rem;
+  display: flex;
+  align-items: center;
+  margin-bottom: 5rem;
+}
+#mypage .mypage-secTit h1{
+  font-size: 2.8rem;
+  font-weight: 600;
+  display: inline-block;
+}
+#mypage .mypage-secTit h3{
+  font-size: 4rem;
+  font-weight: 800;
+  color: var(--primaryColor);
+  margin-left: 3rem;
+  display: inline-block;
+}
+#mypage .mypage-secTit h4{
+  font-size: 1.8rem;
+  font-weight: 400;
+  color: #666;
+  margin-left: 8rem;
+  width: 80rem;
+}
+
+
+/* 내 게시물 */
+#mypage .coment-box h5{
+  text-align: left;
+  color: #666;
+}
+
+
+/* 내 코멘트 */
+#mypage .coment{
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+#mypage .coment-box h5{
+  font-size: 2.4rem;
+  width: inherit;
+}
+#mypage .coment-box h6{
+  font-size: 2rem;
+  font-weight: 400;
+  color: #999;
+}
+#mypage .coment-box p{
+  font-size: 1.8rem;
+  font-weight: 300;
+  color: #666;
+}
+
+#mypage .coment-box{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 130rem;
+  height: 23rem;
+  background-color: #fff;
+  padding-right: 2rem;
+  border-radius: 2rem;
+  transition: 0.3s;
+}
+#mypage .coment-box:hover{
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+#mypage .coment-box .coment-img{
+  width: 16rem;
+  height: 20rem;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+#mypage .coment-box .coment-txt{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 15rem;
+  width: 70rem;
+}
+#mypage .coment-box .coment-txt h5{
+  font-size: 2rem;
+  font-weight: 600;
+  color: #333;
+}
+#mypage .coment-box .coment-txt h6{
+  font-size: 1.8rem;
+  font-weight: normal;
+}
+#mypage .coment-box .coment-txt p{
+  font-size: 1.6rem;
+}
+
+#mypage .coment-box .coment-icon{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  line-height: 6rem;
+  font-size: 3rem;
+  width: 6rem;
+  height: 6rem;
+  border-radius: 50px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+  #mypage .coment-box .coment-icon:nth-child(1){
+    margin-bottom: 1rem;
+  }
+#mypage .coment-box .coment-icon:hover{
+  color: #fff;
+  background-color: #333;
+}
+
+
+/* 결제이력 */
+#mypage .list h5{
+  width: 20rem;
+  text-align: left;
+}
+#mypage .list h6:nth-child(3){
+  font-size: 1.8rem;
+  color: #333;
+  width: 10rem;
+}
+#mypage .list h6:nth-child(2){
+  font-size: 1.8rem;
+  color: #333;
+  width: 38rem;
+}
+#mypage .list p{
+  font-size: 3.2rem;
+  font-weight: bold;
+  color: var(--primaryColor);
+  width: 20rem;
+  text-align: right;
+}
+
+#mypage .list .list-box{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 130rem;
+  height: 8rem;
+  background-color: #fff;
+  border-radius: 50px;
+  transition: 0.3s;
+  margin-bottom: 2rem;
+  cursor: pointer;
+}
+#mypage .list .list-box:hover{
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.1);
+}
+#mypage .list .list-box .list-txt{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#mypage .list .list-box .pc-none{
+  display: flex;
+  align-items: center;
+}
+
+
+
+
+
+/* 태블릿______________________________ */
+@media screen and (max-width:1400px){ 
+
+  #mypage section:nth-child(1){margin-top: 15rem;}
+
+  /* 내 프로필 */
+  #mypage .my-title img{
+    width: 18rem;
+  }
+  #mypage .pc-only{display: none;}
+  #mypage .profile-box{
+    width: 100%;
+    height: 22rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+  }
+  #mypage .profile-user img{
+    width: 10rem;
+    height: 10rem;
+  }
+  #mypage .profile-info{
+    width: max-content;
+  }
+  #mypage .profile-id,
+  #mypage .profile-email,
+  #mypage .profile-num{
+    margin: 2rem 0;
+  }
+
+  #mypage .btn-box{
+    width: 100%;
+    height: 20rem;
+    border: 1px solid var(--primaryColor);
+    border-radius: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5rem;
+    background-color: #fff;
+    margin: 2rem auto 0 auto;
+  }
+  #mypage .btn-box a{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s;
+  }
+  #mypage .btn-box a p{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  #mypage .btn-box a i{
+    font-size: 3.5rem;
+    color: #333;
+    background-color: #F7F4F3;
+    border-radius: 50rem;
+    text-align: center;
+    line-height: 8rem;
+    margin-bottom: 2.5rem;
+    width: 8rem;
+    height: 8rem;
+  }
+  #mypage .btn-box a:hover,
+  #mypage .btn-box a:hover>i{
+    color: var(--primaryColor);
+  }
+  #mypage .sub-btn{
+    width: 100%;
+    padding-right: 0.1rem;
+  }
+
+
+  /* 내 게시물 */
+  #mypage .coment-box{
+    width: 100%;
+    padding: 2rem;
+  }
+  #mypage .coment-box .mypage-icon{
+    display: flex;
+    flex-direction: column;
+  }
+  #mypage .coment-box .coment-icon{
+    background-color:#333;
+    color: #fff;
+    width: 5rem;
+    height: 5rem;
+  }
+  #mypage .coment-box .coment-icon:nth-child(1){
+    margin-bottom: 1rem;
+  }
+  #mypage .coment-box .coment-txt{
+    width: 36rem;
+    margin: 0 2rem;
+  }
+  #mypage .mypage-secTit{
+    max-width: 100%;
+    height: 5.5rem;
+  }
+  #mypage .mypage-secTit h1{
+    font-size: 2rem;
+    width: 12rem;
+  }
+  #mypage .mypage-secTit h3{
+    font-size: 3.2rem;
+    margin-left: 0rem;
+  }
+  #mypage .mypage-secTit h4{
+    font-size: 1.6rem;
+    margin-left: 4rem;
+    width: 50rem;
+  }
+  #mypage .list .list-box{
+    width: 100%;
+    height: 13.5rem;
+    border-radius: 2rem;
+  }
+
+  #mypage .list .list-box .list-txt .pc-none{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+  #mypage .list .list-box .list-txt .pc-none h5{
+    width: 20rem;
+  }
+  #mypage .list .list-box .list-txt .pc-none h6{
+    color: #666;
+  }
+  #mypage .list .list-box .list-txt .pc-none p{
+    display: inline-block;
+  }
+  #mypage .list .list-box .list-txt .pc-none:nth-child(1){
+    display: flex;
+    justify-content: baseline;
+    align-items: baseline;
+  }
+  #mypage .list .list-box .list-txt .pc-none:nth-child(2){
+    display: flex;
+    flex-direction: column-reverse;
+    align-items:end
+  }
+}
+
+
+
+
+/* 모바일______________________________ */
+@media screen and (max-width:768px){
+  #mypage section:nth-child(1){margin-top: 10rem;}
+  #mypage .my-title{
+    margin: 2rem 0;
+  }
+  #mypage .my-title h2{
+    font-size: 3rem;
+  }
+  #mypage .profile-box{
+    width: 100%;
+    height: max-content;
+    background-color: transparent;
+    border: none;
+    display: flex;
+    flex-direction: column;
+  }
+  #mypage .profile-user img{
+    width: 8rem;
+    height: 8rem;
+  }
+  #mypage .profile-info{
+    width: 14.5rem;
+    height: 7.8rem;
+    text-align: center;
+    line-height: 2.5rem;
+    margin-top: 2rem;
+  }
+  #mypage .profile-info h4{
+    display: none;
+    margin: 0;
+  }
+  #mypage .profile-info h5{
+    text-align: center;
+    font-weight: 300;
+  }
+  #mypage .profile-id,
+  #mypage .profile-email,
+  #mypage .profile-num{
+    margin: 0;
+  }
+  #mypage .profile-id h5{
+    font-weight: 700;
+  }
+
+  #mypage .btn-box{
+    width: 100%;
+    height: 10rem;
+    gap: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+  }
+  #mypage .btn-box a{
+    width: 9rem;
+    height: 9rem;
+  }
+  #mypage .btn-box a p{
+    font-size: 1.5rem;
+  }
+  #mypage .btn-box a i{
+    font-size: 2.5rem;
+    margin-bottom: 0.2rem;
+    background-color: transparent;
+    width: 5rem;
+    height: 5rem;
+    line-height: 5rem;
+  }
+  #mypage .btn-box a:hover>i{
+    color: var(--primaryColor);
+  }
+
+  #mypage .sub-btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    width: 100%;
+  }
+  #mypage .sub-btn button{
+    width: 8rem;
+    height: 3rem;
+    font-size: 1.3rem;
+    font-weight: 600;
+  }
+  #mypage .sub-btn .logout{
+    background-color: var(--secondaryColor);
+    color: #fff;
+  }
+  #mypage .sub-btn .exit{
+    background-color: #e3e3e3;
+    border: none;
+    color: #666;
+  }
+
+
+  /* 내 게시물 */
+  #mypage .mob-none{display: none;}
+  #mypage .mypage-secTit{
+    width: 100%;
+    border: none;
+    margin-bottom: 0;
+    padding: 1rem;
+  }
+  #mypage .mypage-secTit h1{
+    font-size: 1.6rem;
+    width: max-content;
+  }
+  #mypage .mypage-secTit h3{
+    font-size: 1.6rem;
+    margin-left: 1rem;
+  }
+  #mypage .mypage-secTit h4{
+    font-size: 1.0rem;
+    width: 20rem;
+    margin-left: 2rem;
+  }
+
+  #mypage .coment{
+    gap: 0.5rem;
+  }
+
+  #mypage .list .list-box{
+    width: 100%;
+    height: 10rem;
+    border-radius: 1rem;
+  }
+  #mypage .coment-box{
+    width: 100%;
+    height: 10rem;
+    border-radius: 1rem;
+    justify-content: space-between;
+  }
+
+  #mypage .coment-box .coment-txt{
+    height: 8rem;
+    margin: 0;
+    width: 100%;
+    min-width: 3rem;
+  }
+  #mypage .coment-box .coment-txt h5{
+    font-size: 1.6rem;
+    display: -webkit-box;            
+    -webkit-box-orient: vertical;  
+    -webkit-line-clamp: 2; 
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  #mypage .visited .coment-box .coment-txt h5,
+  #mypage .mycoment .coment-box .coment-txt h5{
+    font-size: 1.6rem;
+    display: -webkit-box;            
+    -webkit-box-orient: vertical;  
+    -webkit-line-clamp: 1; 
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  #mypage .coment-box .coment-txt h6,
+  #mypage .coment-box .coment-txt p,
+  #mypage .coment-box h6{
+    font-size: 1.2rem;
+    color: #999;
+    display: -webkit-box;            
+    -webkit-box-orient: vertical;  
+    -webkit-line-clamp: 1; 
+    white-space: nowrap; 
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-break: break-all;
+  }
+
+  #mypage .coment .coment-box .coment-icon:nth-child(1){
+    display: none;
+  }
+  #mypage .coment .coment-box .coment-icon{
+    width: 2.5rem;
+    height: 2.5rem;
+    font-size: 1.3rem;
+    margin-left: 1rem;
+  }
+
+  #mypage .visited .coment-box{
+    height: max-content;
+    gap: 3rem;
+  }
+  #mypage .visited .coment-box .coment-txt{
+    width: 100%;
+    max-width: 35rem;
+    min-width: 10rem;
+  }
+  #mypage .visited .coment-box .coment-img{
+    width: 10rem;
+    height: 10rem;
+    border-radius: 1rem;
+    display: inline-block;
+  }
+  #mypage .visited .coment-box .coment-img img{
+    width: 100%;
+    height: 100%;
+  }
+  #mypage .mycoment .coment-box .coment-img{
+    display: none;
+  }
+
+
+
+  /* 결제이력 */
+  #mypage .list{
+    margin: 0;
+    background-color: #fff;
+    border-radius: 1rem;
+  }
+  #mypage .list .list-box{
+    margin: 0;
+    border-bottom: 1px solid #eee;
+    width: 100%;
+  }
+  #mypage .list .list-box .list-txt{
+    width: 100%;
+    padding: 0 2rem;
+    display: flex;
+    justify-content: space-between;
+  }
+    #mypage .list .list-box .list-txt .pc-none{
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 0.3rem;
+    width: 100%;
+  }
+  #mypage .list .list-box .list-txt h5{
+    font-size: 1.3rem;
+    color: #666;
+    width: 100%;
+  }
+
+  #mypage .list .list-box .list-txt .pc-none h6{
+    font-size: 1.6rem;
+    color: #333;
+    width: 20rem;
+    text-align: right;
+  }
+  #mypage .list .list-box .list-txt .pc-none p{
+    font-size: 1.6rem;
+    font-weight: 800;
+    width: 100%;
+  }
+  #mypage .list .list-box .list-txt .pc-none h6:nth-child(2){
+    text-align: left;
+  }
+
+}

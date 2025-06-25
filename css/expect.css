@@ -1,0 +1,206 @@
+#expect{margin:auto;}
+
+
+/* 배너----------------- */
+#expect .banner{
+  margin-top: 9rem; /* 헤더높이 */
+  width: 100%;
+  height: 40rem; 
+  background: url(../image/Exhibition/expect/banner.png) no-repeat center;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+#expect .banner::before{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+}
+#expect .banner .title{
+  margin: auto;
+  flex-direction: column; 
+  text-align: center;
+  color: white;
+  position: relative;
+}
+
+
+
+/* 검색창----------------- */
+#expect .search h5{
+  margin: 0rem 0 1rem;
+  font-weight: 500;
+}
+#expect .search{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  row-gap: 1.5rem;
+}
+#expect .ex-search-box{ 
+  position: relative;
+  display: flex;
+  width: 47rem;
+  height: 4rem;
+  justify-content: flex-end;
+  align-items: center;
+  align-content: center;
+  border-radius: 3.125rem;
+  border: 1px solid #ccc;
+  overflow: hidden;
+}
+#expect .ex-search-box>input{
+  position: absolute;
+  width: 22rem;
+  left: 190px;
+  background: transparent;
+  font-family: 'SUIT', sans-serif;
+  font-size: 1.5rem;
+}
+    /* 달력인풋 스타일 */
+#expect .month-wrapper input[type="month"]{
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  width: 18rem;
+  height: 4.1rem;
+  border: 1px solid #ccc;
+  padding: 1rem 2rem;
+  border-radius: 3.125rem;
+  margin: 0;
+  font-family: 'SUIT', sans-serif;
+  font-size: 1.8rem;
+  background: transparent;
+  color: #858585;
+}
+    /* 달력 인풋 기본 아이콘 숨기기 */
+#expect .month-wrapper input[type="month"]::-webkit-calendar-picker-indicator{
+  opacity: 0;
+  position: absolute;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+    /* 커스텀 아이콘 */
+#expect .month-wrapper .custom-icon{
+  position: absolute;
+  left: 30%;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.5rem;
+  color: #ccc; 
+  pointer-events: none;
+}
+#expect .ex-search-box>i{
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 2.5rem;
+  color: #ccc;
+}
+
+    /* 카테고리 */
+#expect .cate{
+  display: flex;
+}
+#expect .cate li{
+  height: 4.6rem;
+  font-size: 2rem;
+  font-weight: 600;
+  margin-top: 6.7rem;
+  padding: 1rem 2rem;
+  text-align: center;
+  border-radius: var(--radiusInfinite);
+  color: var(--primaryColor);
+  transition: 0.3s;
+  border: 1px solid var(--primaryColor);
+  margin: 6.7rem 0.5rem;
+}
+#expect .cate li:first-child{
+  background-color: var(--primaryColor);
+  color: white;
+}
+#expect .search .cate li:hover{
+  background-color: var(--primaryColor);
+  color: white;
+}
+
+
+#expect .post-item:hover .post-img{
+  filter: brightness(70%);
+}
+/* 더보기 버튼 */
+#expect .more {
+  display: flex;
+  justify-content: center;
+}
+
+
+
+/* 미디어----------------- */
+/* Tablet */
+@media screen and (max-width:1400px){
+  /* 배너 */
+  #expect .banner{
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    height: 30rem;
+    position: relative; 
+    margin-top: 9rem; 
+  }
+  
+  #expect .search h5{
+    margin:0;
+    font-weight: 500;
+  }
+  #expect .cate li{
+    font-size: 2rem;
+  }
+  
+}
+
+
+/* Mobile */
+@media screen and (max-width:768px){
+
+  #expect .banner{
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    height: 20rem;
+    position: relative; 
+    margin-top: 4.6rem; 
+    padding: 0;
+  }
+  #expect .banner .title{
+    margin: 0;
+  }
+
+  #expect .search{
+    margin-bottom: 3rem;
+  }
+  #expect .cate{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  #expect .cate li{
+    margin: 2rem 1rem 0 0;
+  }
+
+  #expect .ex-search-box{ 
+    position: relative;
+    display: flex;
+    width: 100%;
+  }
+
+}

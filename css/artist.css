@@ -1,0 +1,95 @@
+@charset "utf-8"; 
+
+#artist{
+  background: var(--mainBg);
+}
+
+/* 메인 */
+#artist main{
+  margin-top: 9rem; /* 헤더높이 */
+}
+#artist main .main-image{
+  width: 100%;
+  height: 40rem;
+  background: url(../image/artist-main.jpg) no-repeat center 45%/cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+#artist main .main-image::before{
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.6);
+}
+#artist main .main-image .title{
+  position: relative;
+  text-align: center;
+  color: var(--mainBg);
+}
+
+#artist .portfolio-wrap{ 
+  /* border: 1px solid #000; */
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 5rem;
+  row-gap: 5rem;
+}
+#artist .portfolio{ 
+  max-width: 40rem;
+  margin: auto;
+  aspect-ratio: 4/3;
+  display: flex;
+  flex-direction: column;
+}
+#artist .portfolio img{ 
+  width: 100%;
+  object-fit: cover;
+  aspect-ratio: 16/9;
+  border-radius: var(--radius-sm) var(--radius-sm) 0 0;
+}
+#artist .portfolio .name{ 
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: #fff;
+  border-radius: 0 0 var(--radius-sm) var(--radius-sm);
+}
+
+#artist .btn{
+  margin: 10rem auto;
+}
+
+
+/* Tablet */
+@media screen and (max-width:1400px){
+  #artist .portfolio-wrap{
+    grid-template-columns: repeat(2, 1fr);
+    margin: 0 auto;
+    width: fit-content;
+  }
+}
+
+/* Mobile */
+@media screen and (max-width:768px){
+  #artist main{
+    margin-top: 4.6rem; /* 헤더높이 */
+  }
+  #artist main .main-image .title{
+    margin: 0 3rem;
+  }
+  #artist .portfolio-wrap{
+    grid-template-columns: repeat(1, 1fr);
+    margin: 0 auto;
+  }
+  #artist .portfolio{ 
+    max-width: 30rem;
+  }
+
+}

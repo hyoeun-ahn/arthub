@@ -1,0 +1,250 @@
+
+#recruit {
+  /* width: 100%; */ /* 배경 전체로 넣을 경우 */
+  margin: auto;
+  /* padding: 15rem 0; */
+  z-index: 0;
+}
+
+
+/* 제목 */
+
+
+#recruit #first_cards .title p{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family:'suit';
+  font-weight: bold;
+  color: var(--textColor);
+  font-size: var(--font-base);
+}
+
+
+#recruit .top-image{
+  filter: brightness(40%);
+  width: 100%;
+  margin: 0 auto;
+}
+
+
+/* 첫번째 섹션 */
+
+#recruit .recruit_cards .pre-title{
+  width: 100%;
+  background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url("../image/top-image.png");
+  background-position: center;
+  background-size: cover;
+  padding: 17.6rem 0;
+  margin: 0 auto;
+  text-align: center;
+  height: 49rem;
+}
+
+
+#recruit .recruit_cards .pre-title h2{
+
+  color: var(--mainBg);
+  font-size: var(--font-xl);
+  text-align: center;
+  margin-top: 8rem;
+
+}
+#recruit .recruit_cards .pre-title h3{
+
+  color: var(--mainBg);
+  font-size: var(--font-base);
+  text-align: center;
+  margin-top: 0rem;
+}
+
+
+/* 검색창----------------- */
+
+#recruit .search{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  row-gap: 1.5rem;
+}
+#recruit .ex-search-box{ 
+  position: relative;
+  display: flex;
+  width: 47rem;
+  height: 4rem;
+  justify-content: flex-end;
+  align-items: center;
+  align-content: center;
+  border-radius: 3.125rem;
+  border: 1px solid #ccc;
+  overflow: hidden;
+}
+#recruit .ex-search-box>input{
+  position: absolute;
+  width: 22rem;
+  left: 190px;
+  background: transparent;
+  font-family: 'SUIT', sans-serif;
+  font-size: 1.5rem;
+}
+    /* 달력인풋 스타일 */
+#recruit .month-wrapper input[type="month"]{
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  width: 18rem;
+  height: 4.1rem;
+  border: 1px solid #ccc;
+  padding: 1rem 2rem;
+  border-radius: 3.125rem;
+  margin: 0;
+  font-family: 'SUIT', sans-serif;
+  font-size: 1.8rem;
+  background: transparent;
+  color: #858585;
+}
+    /* 달력 인풋 기본 아이콘 숨기기 */
+#recruit .month-wrapper input[type="month"]::-webkit-calendar-picker-indicator{
+  opacity: 0;
+  position: absolute;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+    /* 커스텀 아이콘 */
+#recruit .month-wrapper .custom-icon{
+  position: absolute;
+  left: 30%;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.5rem;
+  color: #ccc; 
+  pointer-events: none;
+}
+#recruit .ex-search-box>i{
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 2.5rem;
+  color: #ccc;
+}
+
+    /* 카테고리 */
+#recruit .cate{
+  display: flex;
+}
+#recruit .cate li{
+  height: 4.6rem;
+  font-size: 2rem;
+  font-weight: 600;
+  margin-top: 6.7rem;
+  padding: 1rem 2rem;
+  text-align: center;
+  border-radius: var(--radiusInfinite);
+  color: var(--primaryColor);
+  transition: 0.3s;
+  border: 1px solid var(--primaryColor);
+  margin: 6.7rem 0.5rem;
+}
+#recruit .search .cate li:hover{
+  background-color: var(--primaryColor);
+  color: white;
+}
+
+
+/* 검색창 끝 */
+
+
+
+/* 두번째 섹션 */
+
+#post-list-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+/* #post-list1, #post-list2, #post-list3 {
+  display: none;}  */
+
+
+/* #recruit .post-list1,#recruit .post-list2,#recruit .post-list3
+{ 
+  display: flex;
+  flex-wrap: wrap;  
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 160rem;
+  height:115rem;
+  
+} */
+
+
+#recruit .button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10rem;
+}
+
+
+
+@media (max-width:1400px)  {
+
+   /* 카드들 */
+
+    #recruit .post-item {
+      width:32%;
+    }
+
+    #recruit .search h5{
+    margin:0;
+    font-weight: 500;
+  }
+  #recruit .cate li{
+    font-size: 2rem;
+  }
+
+  
+
+}
+
+
+@media (max-width:768px){
+
+    /* 카드들 */
+
+
+    #recruit .post-item {
+      width:100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    #recruit .search{
+    margin-bottom: 3rem;
+  }
+
+    #recruit .ex-search-box{ 
+    position: relative;
+    display: flex;
+    width: 100%;
+  }
+
+    #recruit .cate{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    }
+    #recruit .cate li{
+    margin: 2rem 1rem 0 0;
+    }
+
+
+  }
+    

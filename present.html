@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Art hub</title>
+  <link rel="shortcut icon" href="image/favicon.png">
+  <!-- Script Source -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" defer></script>
+  <script src="js/header.js" defer></script> 
+  <script src="js/more.js" defer></script>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body id="present">
+
+  <header id="ver-exhibit">
+    <div class="header-rel">
+      <div class="header-logo">
+        <a href="exhibit.html">
+          <img src="image/logo-exhibit.png" alt="logo">
+        </a>
+      </div>
+      <ul class="site-group">  
+        <li><a href="present.html" style="color: var(--primaryColor);">현재전시</a></li>
+        <li><a href="expect.html">예정전시</a></li>
+        <li><a href="past.html">지난전시</a></li>
+        <li><a href="artist.html">작가 포트폴리오</a></li>
+      </ul>
+      <div class="header-right">
+        <div class="search-box">
+          <input type="text" id="search" placeholder="검색어를입력하세요">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </div>
+        <div class="user-icon">
+          <a href="mypage.html?from=ver-exhibit"><i class="fa-solid fa-user"></i></a>
+        </div>
+        <div class="login-icon">
+          <a href="login.html?from=ver-exhibit"><i class="fa-solid fa-arrow-right-to-bracket"></i></a>
+        </div>
+
+        <!-- PC에서는 안보이게 함 -->
+        <a href="#" class="mob_btn">
+          <span></span>
+          <span></span>
+          <span></span>
+        </a>
+      </div>
+      <div class="subNav">
+        <div class="inner">
+          <div class="search-box">
+            <input type="text" placeholder="검색어를입력하세요">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </div>
+          <ul class="site-group">  
+            <li><a href="present.html">현재전시</a></li>
+            <li><a href="expect.html">예정전시</a></li>
+            <li><a href="past.html">지난전시</a></li>
+            <li><a href="artist.html">작가 포트폴리오</a></li>
+            <li class="mypage"><a href="mypage.html?from=ver-exhibit">마이페이지</a></li>
+            <li class="direct"><a href="contest.html">공모페이지 바로가기</a></li>
+            <li>
+              <div class="sns">
+                <a href="https://www.facebook.com/arthub02"><img src="image/facebook-white.png" class="facebook"alt="facebook"></a>
+                <a href="instagram.com/arthub_vap/"><img src="image/insta-white.png" class="insta"alt="insta"></a>
+                <a href="https://blog.naver.com/venice87"><img src="image/blog-white.png" class="blog"alt="blog"></a>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="allMenuWrapBg"></div>
+  </header>
+
+
+  <!-- 리모콘 -->
+  <div class="control">
+    <a class="control-main" href="exhibit.html">
+      <i class="bi bi-arrow-bar-right"></i>전시 페이지
+    </a>
+    <a class="control-main" href="contest.html">
+      <i class="bi bi-arrow-bar-right"></i>공모 페이지
+    </a>
+    <a class="control-intro" href="index.html">
+      <i class="bi bi-house-door-fill"></i>
+    </a>
+    <a class="control-top" href="#">
+      <i class="bi bi-chevron-double-up"></i>
+    </a>
+  </div>
+  
+
+  <section class="banner full">
+    <div class="title">
+      <h2>현재 전시</h2>
+      <h4>지금, 이 순간을 기록합니다.</h4>
+    </div>
+  </section>
+
+  <!-- 검색창 -->
+  <section class="search">
+    <h5>오늘, 어떤 전시를 보고 싶으신가요?</h5>
+    <div class="ex-search-box">
+      <div class="month-wrapper">
+        <input type="month" id="monthInput">
+        <i class="fa-solid fa-calendar custom-icon"></i>
+      </div>
+      <input type="text" placeholder="전시 검색...">
+      <i class="fa fa-search"></i>
+    </div>
+    <ul class="cate">
+      <li><a href="#none">전체 전시</a></li>
+      <li><a href="#none">온라인 전시</a></li>
+      <li><a href="#none">오프라인 전시</a></li>
+      <li><a href="#none">VR전시</a></li>
+    </ul>
+  </section>
+
+  <!-- 포스터목록 -->
+  <section>
+    <ul class="post-list">
+      <li class="post-item">
+        <a href="ex-detail.html">
+          <img class="post-img" src="image/Exhibition/present/img1.png" alt="전시포스터">
+          <div class="post-text">
+            <h3>응축된 호흡</h3>
+            <h5>송미리내</h5>
+            <h6>2025-05-07 ~ 2025-05-31</h6>
+          </div>
+        </a>
+      </li>
+      <li class="post-item">
+        <a href="ex-detail.html">
+          <img class="post-img" src="image/Exhibition/present/img2.png" alt="전시포스터">
+          <div class="post-text">
+            <h3>유연한 공간</h3>
+            <h5>목정 방의걸, 문민순, 안숙선</h5>
+            <h6>2025-05-06 ~ 2025-06-01</h6>
+          </div>
+        </a>
+      </li>
+      <li class="post-item">
+        <a href="ex-detail.html">
+          <img class="post-img" src="image/Exhibition/present/img3.png" alt="전시포스터">
+          <div class="post-text">
+            <h3>LAZY :: 샘바이펜展</h3>
+            <h5>샘바이펜(SAMBYPEN)</h5>
+            <h6>2025-04-12 ~ 2025-05-17</h6>
+          </div>
+        </a>
+      </li>
+      <li class="post-item">
+        <a href="ex-detail.html">
+          <img class="post-img" src="image/Exhibition/present/img4.png" alt="전시포스터">
+          <div class="post-text">
+            <h3>망망대해 :: 장준영展</h3>
+            <h5>장준영</h5>
+            <h6>2025-05-10 ~ 2025-05-24</h6>
+          </div>
+        </a>
+      </li>
+
+      <li class="post-item">
+        <a href="ex-detail.html">
+          <img class="post-img" src="image/Exhibition/present/img5.png" alt="전시포스터">
+          <div class="post-text">
+            <h3>I AM GROUN(DE)D</h3>
+            <h5>이연주, 미소, 윤동희, 엔탈트</h5>
+            <h6>2025-04-26 ~ 2025-11-19</h6>
+          </div>
+        </a>
+      </li>
+      <li class="post-item">
+        <a href="ex-detail.html">
+          <img class="post-img" src="image/Exhibition/present/img6.png" alt="전시포스터">
+          <div class="post-text">
+            <h3>움직이다, 상상하다, 다르게 보다!</h3>
+            <h5>엄정순, 백인교, 김동현</h5>
+            <h6>2025-04-30 ~ 2025-07-06</h6>
+          </div>
+        </a>
+      </li>
+      <li class="post-item">
+        <a href="ex-detail.html">
+          <img class="post-img" src="image/Exhibition/present/img7.png" alt="전시포스터">
+          <div class="post-text">
+            <h3>Ep. 01 안전지대</h3>
+            <h5>미진콜렉티브</h5>
+            <h6>2025-05-07 ~ 2025-05-20</h6>
+          </div>
+        </a>
+      </li>
+      <li class="post-item">
+        <a href="ex-detail.html">
+          <img class="post-img" src="image/Exhibition/present/img8.png" alt="전시포스터">
+          <div class="post-text">
+            <h3>ego we go I go</h3>
+            <h5>김가인, 김민주, 김윤영,  김서영, 김묘진...</h5>
+            <h6>2025-05-07 ~ 2025-05-20</h6>
+          </div>
+        </a>
+      </li>
+    
+      <li class="post-item">
+        <a href="ex-detail.html">
+          <img class="post-img" src="image/Exhibition/present/img9.png" alt="전시포스터">
+          <div class="post-text">
+            <h3>《이 문장은 검열되었습니다》</h3>
+            <h5>김영봉, 문채원, 박성은, 이산, 임현채</h5>
+            <h6>2025-04-30 ~ 2025-06-01</h6>
+          </div>
+        </a>
+      </li>
+      <li class="post-item">
+        <a href="ex-detail.html">
+          <img class="post-img" src="image/Exhibition/present/img10.png" alt="전시포스터">
+          <div class="post-text">
+            <h3>담대하게</h3>
+            <h5>김지현, 문상욱, 선환두, 이돈희</h5>
+            <h6>2025-05-27 ~ 2025-07-27</h6>
+          </div>
+        </a>
+      </li>
+      <li class="post-item">
+        <a href="ex-detail.html">
+          <img class="post-img" src="image/Exhibition/present/img11.png" alt="전시포스터">
+          <div class="post-text">
+            <h3>시대공감</h3>
+            <h5>김배히, 김혜성, 박홍순, 손현숙, 신현국, 염문선, 유병호,</h5>
+            <h6>2025-05-27 ~ 2025-06-08</h6>
+          </div>
+        </a>
+      </li>
+      <li class="post-item">
+        <a href="ex-detail.html">
+          <img class="post-img" src="image/Exhibition/present/img12.png" alt="전시포스터">
+          <div class="post-text">
+            <h3>2025 공주갤러리주간</h3>
+            <h5>이미정 갤러리(김인), 갤러리 쉬갈(윤지선), 대통길 미술관(정용일), 민 갤러리(이은하), 수리치(전좌빈) </h5>
+            <h6>2025-02-20 ~ 2025-06-29</h6>
+          </div>
+        </a>
+      </li>
+
+      <li class="post-item">
+        <a href="ex-detail.html">
+          <img class="post-img" src="image/Exhibition/present/img13.png" alt="전시포스터">
+          <div class="post-text">
+            <h3>머무름과 기억의 중첩</h3>
+            <h5>강호성, 권유정, 김만섭, 김새롬, 김지민, 남기승, 류재성, 최수빈</h5>
+            <h6>2025-05-27 ~ 2025-06-08</h6>
+          </div>
+        </a>
+      </li>
+      <li class="post-item">
+        <a href="ex-detail.html">
+          <img class="post-img" src="image/Exhibition/present/img14.png" alt="전시포스터">
+          <div class="post-text">
+            <h3>박세준展</h3>
+            <h5>박세준</h5>
+            <h6>2025-05-27 ~ 2025-06-23</h6>
+          </div>
+        </a>
+      </li>
+      <li class="post-item">
+        <a href="ex-detail.html">
+          <img class="post-img" src="image/Exhibition/present/img15.png" alt="전시포스터">
+          <div class="post-text">
+            <h3>회화의 질량</h3>
+            <h5>구자인, 김문빈, 김민혜, 허아영</h5>
+            <h6>2025-05-23 ~ 2025-05-30</h6>
+          </div>
+        </a>
+      </li>
+      <li class="post-item">
+        <a href="ex-detail.html">
+          <img class="post-img" src="image/Exhibition/present/img16.png" alt="전시포스터">
+          <div class="post-text">
+            <h3>2025 창형展</h3>
+            <h5>가국현, 곽미영, 김동옥, 김대호, 고)김동창, 김민석</h5>
+            <h6>2025-05-26 ~ 2025-06-01</h6>
+          </div>
+        </a>
+      </li>
+
+      <li class="post-item">
+        <a href="ex-detail.html">
+          <img class="post-img" src="image/Exhibition/present/img17.png" alt="전시포스터">
+          <div class="post-text">
+            <h3>점으로부터</h3>
+            <h5>우명애</h5>
+            <h6>2025-05-24 ~ 2025-05-31</h6>
+          </div>
+        </a>
+      </li>
+      <li class="post-item">
+        <a href="ex-detail.html">
+          <img class="post-img" src="image/Exhibition/present/img18.png" alt="전시포스터">
+          <div class="post-text">
+            <h3>유년의 뜰</h3>
+            <h5>장애란</h5>
+            <h6>2025-05-24 ~ 2025-05-30</h6>
+          </div>
+        </a>
+      </li>
+      <li class="post-item">
+        <a href="ex-detail.html">
+          <img class="post-img" src="image/Exhibition/present/img19.png" alt="전시포스터">
+          <div class="post-text">
+            <h3>바람의 섬과 붓끝 사이</h3>
+            <h5>호암 양창보(湖岩 梁昌普)</h5>
+            <h6>2025-05-23 ~ 2025-06-16</h6>
+          </div>
+        </a>
+      </li>
+      <li class="post-item">
+        <a href="ex-detail.html">
+          <img class="post-img" src="image/Exhibition/present/img20.png" alt="전시포스터">
+          <div class="post-text">
+            <h3>우리는 이렇게</h3>
+            <h5>옥돌 작업실</h5>
+            <h6>2025-05-22 ~ 2025-06-02</h6>
+          </div>
+        </a>
+      </li>
+    </ul>
+    
+
+    <!-- 더보기 버튼 -->
+      <div class="more">
+        <button class="btn primary">더보기</button>
+      </div>
+  </section>
+
+
+  <footer>
+    <div class="footer-inner">
+      <a class="footer-no-pc" href="index.html">
+        <img src="image/logo-white.png" alt="아트허브 로고">
+      </a>
+      <div class="footer-item">
+        <div class="footer-tit">
+          <a href="index.html">예술과 아카이브</a>
+        </div>
+        <div class="footer-info">
+          <a href="#"><span>개인정보취급방침</span></a>
+          <span>사업자 등록번호 : 314-20-75752 </span>
+        </div>
+        <div class="footer-contact">
+          <span>Contact</span>
+          <p>02-2654-7138</p>
+          <p>arthub2@naver.com</p>
+        </div>
+      </div>
+      <div class="footer-sns">
+        <a href="instagram.com/arthub_vap/">
+          <img src="image/icon-sns1.png" alt="인스타그램">
+        </a>
+        <a href="https://blog.naver.com/venice87">
+          <img src="image/icon-sns2.png" alt="블로그">
+        </a>
+        <a href="https://www.facebook.com/arthub02">
+          <img src="image/icon-sns3.png" alt="페이스북">
+        </a>
+      </div>
+    </div>
+    <address>
+      Copyright ARTHUB. All Rights Reserved
+    </address>
+  </footer>
+
+
+</body>
+</html>
