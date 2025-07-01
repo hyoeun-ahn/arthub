@@ -32,49 +32,44 @@
   color: var(--mainBg);
 }
 
-#artist .portfolio-wrap{ 
-  /* border: 1px solid #000; */
+#artist .card-wrap{
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   column-gap: 5rem;
   row-gap: 5rem;
 }
-#artist .portfolio{ 
-  max-width: 40rem;
-  margin: auto;
-  aspect-ratio: 4/3;
+#artist .card{
   display: flex;
   flex-direction: column;
+  width: 100%;
+  height: auto;
 }
-#artist .portfolio img{ 
+#artist .card img{
   width: 100%;
   object-fit: cover;
   aspect-ratio: 16/9;
   border-radius: var(--radius-sm) var(--radius-sm) 0 0;
 }
-#artist .portfolio .name{ 
-  flex: 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
+#artist .card .name{
   background-color: #fff;
+  padding: 3rem;
+  text-align: center;
   border-radius: 0 0 var(--radius-sm) var(--radius-sm);
 }
 
 #artist .btn{
   margin: 10rem auto;
-}
 
+}
 
 /* Tablet */
 @media screen and (max-width:1400px){
-  #artist .portfolio-wrap{
+  #artist .card-wrap{
     grid-template-columns: repeat(2, 1fr);
-    margin: 0 auto;
-    width: fit-content;
+    margin: 0 5rem;
   }
 }
+
 
 /* Mobile */
 @media screen and (max-width:768px){
@@ -84,12 +79,9 @@
   #artist main .main-image .title{
     margin: 0 3rem;
   }
-  #artist .portfolio-wrap{
+  #artist .card-wrap{
     grid-template-columns: repeat(1, 1fr);
-    margin: 0 auto;
-  }
-  #artist .portfolio{ 
-    max-width: 30rem;
+    margin: 0 3rem;
   }
 
 }
