@@ -204,6 +204,9 @@
   justify-content: center;
   align-items: center;
 }
+#contest .nowpost .tab-header{
+  width: 100%;
+}
 #contest .nowpost .tab-header .tab {
   display: flex;
   align-items: center;
@@ -233,6 +236,11 @@
   width: 30rem;
   background-color: var(--primaryColor);
   transition: left 0.3s ease;
+}
+
+#contest .nowpost .tab-contents{
+  height: 55rem;
+  overflow: hidden;
 }
 
 #contest .nowpost .tab-contents > div {
@@ -335,7 +343,7 @@
   font-size: 1.8rem;
   display: -webkit-box;
   -webkit-box-orient: vertical;
-  -webkit-line-clamp: 3;
+  -webkit-line-clamp: 2;
   overflow: hidden;
   text-overflow: ellipsis;
   line-height: 2.5rem;
@@ -367,7 +375,9 @@
 @media screen and (max-width: 1400px) {
 /* 현재전시, 예정전시 */  
   #contest .visual-item .mob-btn{display: none;}
-
+  #contest .nowpost .tab-contents{
+    min-height: 45rem;
+  }
   /* 아트허브 소식__________ */
   #contest .news .news-contents {
     width: 100%;
@@ -394,7 +404,10 @@
   #contest section:nth-child(1) {
     margin-top: 5rem;
   }
-  #exhibit .btn{
+  #contest main{
+    min-width: 37rem;
+  }
+  #contest .btn{
     margin-top: 5rem;
   }
 
@@ -438,6 +451,9 @@
     line-height: 5rem;
     margin-top: 2rem;
   }
+  #contest .visual-item .mob-btn:hover{
+    background-color: rgb(127 168 86/ 80%);
+  }
 
   /* info */
   #contest .visual-info {
@@ -479,6 +495,10 @@
   }
 
   /* 현재전시, 예정전시 ______________*/
+  #contest .nowpost .tab-contents{
+    height: 50rem;
+    margin-top: 3rem;
+  }
   #contest .nowpost-item {
     padding: 5rem 0;
   }

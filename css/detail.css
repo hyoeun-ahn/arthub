@@ -41,8 +41,8 @@
 #ex-detail main .des,
 #con-detail main .des{
   /* border: 1px solid red; */
-  width: 140rem;
-  margin: 5rem auto;
+  width: 130rem;
+  margin: 4rem auto;
   text-align: right;
   color: #fff;
   position: relative;
@@ -63,7 +63,7 @@
 }
 #ex-detail main .tags.state,
 #con-detail main .tags.state{
-  width: 140rem;
+  width: 130rem;
   margin: 3rem auto;
   text-align: right;
 }
@@ -71,7 +71,27 @@
 #con-detail main .tags.state .tag{
   border-width: 0.2rem;
   font-weight: 500;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
 }
+
+#ex-detail main .tags.state .tag .icon,
+#con-detail main .tags.state .tag .icon{
+  position: relative;
+  width: 2.4rem;
+  height: 2.4rem;
+  margin-right: 0.5rem;
+}
+#ex-detail main .tags.state .tag .icon i,
+#con-detail main .tags.state .tag .icon i{
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+
+
 
 /* 페이지 공통 */
 #ex-detail section h2,
@@ -99,8 +119,9 @@
 /* 전시 개요 & 작가 */
 #ex-detail #overview .container-wrap,
 #ex-detail #artist .container-wrap{
-  display: flex;
   gap: 3rem;
+  display: grid;
+  grid-template-columns: 5fr 7fr;
 }
 #ex-detail #overview .info,
 #ex-detail #artist .profile{
@@ -230,28 +251,14 @@
   top: 0;
   color: var(--textColor);
 }
-
-/* #ex-detail #preview .cards::before,
-#ex-detail #preview .cards::after,
-#ex-detail #artist .cards::before,
-#ex-detail #artist .cards::after{
-  position: absolute;
-  font-family: fontawesome;
-  font-size: 8rem;
-  top: 50%;
-  transform: translateY(-50%);
-  cursor: pointer;
+#ex-detail #preview .swiper-button-prev:after,
+#ex-detail #artist .swiper-button-prev:after{
+  margin-right: 5rem;
 }
-#ex-detail #preview .cards::before,
-#ex-detail #artist .cards::before{
-  content: '\f053';
-  left: 0;
+#ex-detail #preview .swiper-button-next:after,
+#ex-detail #artist .swiper-button-next:after{
+  margin-left: 5rem;
 }
-#ex-detail #preview .cards::after,
-#ex-detail #artist .cards::after{
-  content: '\f054';
-  right: 0;
-} */
 
 #ex-detail #preview .swiper.mySwiper1,
 #ex-detail #artist .swiper.mySwiper2{
@@ -259,44 +266,45 @@
   padding: 1rem;
   width: 90%;
 }
-#ex-detail #preview .card,
-#ex-detail #artist .card{
-  /* border: 1px solid #000; */
+
+#ex-detail #preview .post-item,
+#ex-detail #artist .post-item{
+  height: auto;
   display: flex;
   flex-direction: column;
-  height: auto;
+  justify-content: center;
+  align-items: center;
 }
-#ex-detail #preview .cards img,
-#ex-detail #artist .cards img{
-  object-fit: cover;
-  aspect-ratio: 3/4;
+
+
+#ex-detail #preview .post-item a,
+#ex-detail #artist .post-item a{
+  max-width: 24rem;
+}
+#ex-detail #preview .post-img,
+#ex-detail #artist .post-img{
   border-radius: var(--radiusInfinite) var(--radiusInfinite) 0 0;
-  box-shadow: var(--boxShadow);
+  aspect-ratio: 3/4;
+  object-fit: cover;
 }
-#ex-detail #artist .cards img:first-child{
+#ex-detail #artist .post-img:first-of-type{
   object-position: bottom;
 }
-#ex-detail #preview .cards .container,
-#ex-detail #artist .cards .container{
-  flex: 1;
-  padding: 3rem;
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  border-radius: 0 0 var(--radius-sm) var(--radius-sm);
-  /* box-shadow: none; */
+#ex-detail #preview .post-text,
+#ex-detail #artist .post-text{
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 0 0 1rem 1rem;
 }
-  
-#ex-detail #preview .cards .container h5,
-#ex-detail #artist .cards .container h5{
-  flex: 1;
-  font-weight: 500;
+#ex-detail #artist .post-text{
+  height: 10rem;
 }
-#ex-detail #preview .cards .container .creation,
-#ex-detail #preview .cards .container .meta{
-  font-size: var(--font-xxs);
-  color: var(--textColorSub);
+#ex-detail #preview .post-text h3,
+#ex-detail #artist .post-text h3{
+  margin-top: 0;
 }
+
+
 
 
 /* 감상평 */
@@ -308,41 +316,64 @@
 #ex-detail #comment .comment-input{
   /* border: 1px solid #000; */
   display: flex;
-  justify-content: space-between;
-  gap: 3rem;
-  height: 13rem;
+  align-items: center;
+  margin-bottom: 3rem;
+  padding: 3rem;
+  position: relative;
+}
+#ex-detail #comment .comment-input::after{
+  content: '';
+  position: absolute;
+  /* inset: 0; */
+  bottom: -3rem;
+  left: 0;
+  width: 100%;
+
   border-bottom: 0.1rem solid var(--textColorSub);
-  padding-bottom: 3rem;
-  /* position: relative; */
 }
 #ex-detail #comment .comment-input textarea{
-  display: inline-block;
   flex: 1;
   border: 0.1rem solid var(--primaryColor);
   border-radius: 1rem;
-  padding: 3rem;
+  padding: 1rem;
+  margin: 1rem 0;
+  height: 6rem;
+  margin-right: 2rem;
 }
 #ex-detail #comment .comment-input textarea:focus{
   border: 0.2rem solid var(--primaryColor);
 }
 #ex-detail #comment .comment-input .btn{
-  height: 100%;
-  margin-top: 0;
+  margin: 1rem 0;
   border-radius: 1rem;
 }
+#ex-detail #comment .comment-wrap img{
+  width: 10rem;
+  height: 10rem;
+  border-radius: 50%;
+  margin-right: 5rem;
+}
+
+#ex-detail #comment .person-wrap{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+}
+
 #ex-detail #comment .person{
   display: flex;
-  gap: 10rem;
   align-items: center;
   padding: 3rem;
 }
-#ex-detail #comment .person img{
-  width: 10rem;
+#ex-detail #comment .person5{
+  display: none;
 }
+
 #ex-detail #comment .person .right{
   display: flex;
   flex-direction: column;
-  gap: 3rem;
+  gap: 1rem;
+  padding: 1rem 0;
 }
 
 /* 작가 */
@@ -353,7 +384,7 @@
   justify-content: space-between;
   padding-bottom: 0.5rem;
   border-bottom: 0.1rem solid var(--textColorSub);
-  margin-bottom: 8rem;
+  margin-bottom: 5rem;
 }
 #ex-detail #artist .left{
   /* border: 1px solid #000; */
@@ -393,7 +424,7 @@
 
 /* 공모 상세페이지의 상세내용 */
 #con-detail #info img{
-  width: 140rem;
+  width: 130rem;
   margin: auto;
 }
 #con-detail #info .btn{
@@ -419,12 +450,17 @@
   } */
   #ex-detail main .des,
   #con-detail main .des{
-    margin: 5rem;
+    margin: 4rem;
   }
   #ex-detail main .tags.state,
   #con-detail main .tags.state{
     width: 100%;
     margin: 3rem 0;
+  }
+  #ex-detail main .tags.state .tag .icon,
+  #con-detail main .tags.state .tag .icon{
+    width: 2.0rem;
+    height: 2.0rem;
   }
   #ex-detail main .tags.state .tag.accent,
   #con-detail main .tags.state .tag.accent{
@@ -434,7 +470,7 @@
   #con-detail section{
     width: 100%;
     /* margin: 0 3rem; */
-    padding: 10rem 5rem;
+    /* padding: 10rem 5rem; */
   }
 
   #ex-detail #overview .container-wrap,
@@ -453,10 +489,29 @@
     gap: 2rem;
   }
 
-  #ex-detail #comment .person{
-    gap: 5rem;
+  #ex-detail #preview .swiper-all,
+  #ex-detail #artist .swiper-all{
+    max-width: 100rem;
+    margin: 0 auto;
+  }
+  #ex-detail #preview .mySwiper1,
+  #ex-detail #artist .mySwiper2{
+    max-width: 85rem;
+    margin: 0 auto;
   }
 
+  #ex-detail #comment .person-wrap{
+    grid-template-columns: 1fr;
+  }
+
+  #ex-detail #comment .comment-input .btn{
+    flex-direction: column;
+    width: 15rem;
+    height: 7rem;
+  }
+  #ex-detail #comment .comment-input textarea{
+    height: 7rem;
+  }
 }
 
 /* Mobile */
@@ -473,9 +528,13 @@
   }
   #ex-detail main .des,
   #con-detail main .des{
-    margin: 3rem;
+    margin: 2rem;
   }
-
+  #ex-detail main .tags.state .tag .icon,
+  #con-detail main .tags.state .tag .icon{
+    width: 1.8rem;
+    height: 1.8rem;
+  }
   #ex-detail main .tags.state .tag.accent,
   #con-detail main .tags.state .tag.accent{
     margin-right: 3rem;
@@ -484,7 +543,7 @@
   #ex-detail section,
   #con-detail section{
     width: 100%;
-    padding: 5rem 3rem;
+    /* padding: 5rem 3rem; */
   }
   #ex-detail section h2,
   #con-detail section h2{
@@ -504,14 +563,12 @@
     left: 10rem;
   }
 
-  #ex-detail #preview .swiper.mySwiper1,
-  #ex-detail #artist .swiper.mySwiper2{
-    width: 80%;
+  #ex-detail #preview .swiper-all,
+  #ex-detail #artist .swiper-all{
+    max-width: 35rem;
+    margin: 0 auto;
   }
-  #ex-detail #preview .card .creation,
-  #ex-detail #preview .card .meta{
-    display: none;
-  }
+
 
 
   #ex-detail #overview .info p,
@@ -532,35 +589,22 @@
   #con-detail #overview .info dd{
     margin: 0.5rem 0;
   }
-
-  #ex-detail #artist .title{
-    flex-wrap: wrap;
-    margin-bottom: 5rem;
+  #ex-detail #artist .title span{
+    display: none;
   }
-  #ex-detail #artist .title .right{
-    /* border: 1px solid #000; */
-    width: 100%;
-    text-align: right;
-    margin-top: 0.5rem;
-  }
-  #ex-detail #comment .comment-input{
-    gap: 1rem;
-    height: 10rem;
-    padding-bottom: 2rem;
-  }
+  
   #ex-detail #comment .comment-input textarea{
-    padding: 1rem;
+    margin: 0 1rem 0 0;
   }
   #ex-detail #comment .comment-input .btn{
     width: 8rem;
     padding: 2rem;
+    margin: 0;
   }
   #ex-detail #comment .comment-wrap{
     gap: 2rem;
   }
-  #ex-detail #comment .person img{
-    /* flex-direction: column; */
-    /* gap: 3rem; */
+#ex-detail #comment .comment-wrap img{
     display: none;
   }
 

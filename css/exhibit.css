@@ -1,8 +1,4 @@
 @charset "utf-8"; 
-#exhibit main{
-  width: 100%;
-  margin: auto;
-}
 
 #exhibit section:nth-child(1) {
   margin-top: 9rem;
@@ -209,6 +205,10 @@
   justify-content: center;
   align-items: center;
 }
+#exhibit .nowpost .tab-header{
+  width: 100%;
+}
+
 #exhibit .nowpost .tab-header .tab{
   display: flex;
   align-items: center;
@@ -240,7 +240,10 @@
   transition: left 0.3s ease;
 }
 
-
+#exhibit .nowpost .tab-contents{
+  height: 55rem;
+  overflow: hidden;
+}
 #exhibit .nowpost .tab-contents > div{
   display: none;
 }
@@ -582,7 +585,9 @@
 
 /* 현재전시, 예정전시 */
   #exhibit .visual-item .mob-btn{display: none;}
-
+  #exhibit .nowpost .tab-contents{
+    min-height: 45rem;
+  }
   /* 오늘의 전시 */
   #exhibit .today .today-wrap {
     justify-content: space-between;
@@ -595,6 +600,7 @@
   #exhibit .today .today-list {
     width: 100%;
   }
+
   #exhibit .today .today-item {
     width: 100%;
   }
@@ -625,6 +631,9 @@
 @media screen and (max-width: 768px) {
   #exhibit section:nth-child(1) {
     margin-top: 5rem;
+  }
+  #exhibit main{
+    min-width: 37rem;
   }
   #exhibit .btn{
     margin-top: 5rem;
@@ -668,6 +677,9 @@
     text-align: center;
     line-height: 5rem;
     margin-top: 2rem;
+  }
+  #exhibit .visual-item .mob-btn:hover{
+    background-color: rgb(127 168 86/ 80%);
   }
 
   /* info */
@@ -721,6 +733,9 @@
     width: 20rem;
     height: 7rem;
   }
+  #exhibit .nowpost .tab-contents{
+    height: 50rem;
+  }
 
   /* 오늘의 전시________________ */
   #exhibit .today .today-wrap {
@@ -773,6 +788,9 @@
   #exhibit .swiper-slide{
     height: 50rem;
   }
+  #exhibit .artist .section-tit{
+    padding-bottom: 0;
+} 
 
 
   /* 아트허브소식 */
